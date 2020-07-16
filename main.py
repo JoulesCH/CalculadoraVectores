@@ -56,8 +56,9 @@ class Vector:
 		if self.dimension == vector.dimension:
 			modulo1 = self.modulo()
 			modulo2 = vector.modulo()
-			angulo = self.angulo(vector)
-			return pow(modulo1**2 + modulo2**2 + 2*modulo1*modulo2*(math.cos(angulo)),0.5)
+			angulo_radianes = math.radians(self.angulo(vector))
+
+			return pow(modulo1**2 + modulo2**2 + 2*modulo1*modulo2*(math.cos(angulo_radianes)),0.5)
 		else:
 			return '    No es posible calcular el angulo entre vetores'	
 		
