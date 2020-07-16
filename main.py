@@ -22,7 +22,7 @@ class Vector:
 			return list
 
 		else:
-			return 'No es posible sumar vetores'
+			return 'No es posible sumar esos vetores'
 
 	def restar(self,vector):
 		"""
@@ -36,7 +36,7 @@ class Vector:
 			return list
 
 		else:
-			return '    No es posible restar vetores'
+			return '    No es posible restar esos vetores'
 
 	def multiplicar(self,escalar):
 		"""
@@ -122,50 +122,83 @@ if __name__ == '__main__':
 		if opcion == '1': # Suma
 			print('\n\n-----------------*------------------')
 			print('     [1]Sumar vectores\n')
+			try:
+				vector1 = Vector(input(texto))
+				vector2 = Vector(input(texto)) 
+			except:
+				print('    Los vectores unicamente se componen de números')	
+			else:	
+				print('\n    Resultado:',vector1.sumar(vector2)) 
 
-			vector1 = Vector(input(texto))
-			vector2 = Vector(input(texto)) 
-
-			print('\n    Resultado:',vector1.sumar(vector2)) 
-			break
+			salir = input('    SALIR? [1/0] =>')
+			if salir == '1':
+				break	
 
 		elif opcion == '2':# Resta
 			print('\n\n-----------------*------------------')
 			print('     [2]Restar vectores\n')
 
-			vector1 = Vector(input(texto))
-			vector2 = Vector(input(texto))  
+			try:
+				vector1 = Vector(input(texto))
+				vector2 = Vector(input(texto)) 
+			except:
+				print('    Los vectores unicamente se componen de números')	
+			else: 
 
-			print('\n    Resultado:',vector1.restar(vector2)) 
-			break
+				print('\n    Resultado:',vector1.restar(vector2)) 
+
+			salir = input('    SALIR? [1/0] =>')
+			if salir == '1':
+				break
 
 		elif opcion == '3':# Multi. por escalar
 			print('\n\n-----------------*------------------')
 			print('     [3]Multiplicar vector por escalar\n')
+			try:
+				vector1 = Vector(input(texto))
+			except:
+				print('    Los vectores unicamente se componen de números')	
+			
+			else:
+				escalar = input('    Ingresa escalar =>')
+				print('\n    Resultado:',vector1.multiplicar(escalar)) 
 
-			vector1 = Vector(input(texto))
-			escalar = input('    Ingresa escalar =>')
-
-			print('\n    Resultado:',vector1.multiplicar(escalar)) 
-			break
+			salir = input('    SALIR? [1/0] =>')
+			if salir == '1':
+				break
 
 		elif opcion == '4':# Resultante
 			print('\n\n-----------------*------------------')
 			print('     [4]Calcular resultante entre vectores\n')
 
-			vector1 = Vector(input(texto))
-			vector2 = Vector(input(texto))
-			print('\n    Resultado:',vector1.resultante(vector2))   
-			break
+			try:
+				vector1 = Vector(input(texto))
+				vector2 = Vector(input(texto)) 
+			except:
+				print('    Los vectores unicamente se componen de números')	
+			else:
+
+				print('\n    Resultado:',vector1.resultante(vector2))  
+
+			salir = input('    SALIR? [1/0] =>')
+			if salir == '1':
+				break
 
 		elif opcion == '5':# Angulo
 			print('\n\n-----------------*------------------')
 			print('     [5]Calcular angulo entre dos vectores\n')
 
-			vector1 = Vector(input(texto))
-			vector2 = Vector(input(texto)) 
-			print('\n    Resultado:',vector1.angulo(vector2)) 
-			break
+			try:
+				vector1 = Vector(input(texto))
+				vector2 = Vector(input(texto)) 
+			except:
+				print('    Los vectores unicamente se componen de números')	
+			else:
+				print('\n    Resultado:',vector1.angulo(vector2)) 
+
+			salir = input('    SALIR? [1/0] =>')
+			if salir == '1':
+				break
 
 		else:
 			print('\n    Opcion iválida')
