@@ -1,4 +1,4 @@
-#UTF-8
+ # -*- coding: utf-8 -*-
 from Pedir_Datos_O_Imprimirlos import Datos #Modulacion
 from Menu import Menu_princial #Modulacion
 
