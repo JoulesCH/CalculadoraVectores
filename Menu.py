@@ -1,7 +1,7 @@
 class Menu_princial:
 	def __init__(self,opcion='0'):
 		self.opcion = opcion
-		self.opciones = {'1':'[1] Suma','2':'[2] Resta','3':'[3] Multiplicacion','4':'[4] Resultante','5':'[5] Resultante'}
+		self.opciones = {'1':'[1] Suma','2':'[2] Resta','3':'[3] Multiplicacion','4':'[4] Resultante','5':'[5] Angulo'}
 
 	def imprimir(self):
 		print('-----------------*-------------')
